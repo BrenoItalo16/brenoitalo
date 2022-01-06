@@ -17,12 +17,12 @@ class _HomeState extends State<Home> {
         slivers: [
           SliverAppBar(
             floating: true,
-            leading: Expanded(
-              child: Image.asset(
-                'assets/images/logo.png',
-                scale: 14,
-              ),
-            ),
+            // leading: Expanded(
+            //   child: Image.asset(
+            //     'assets/images/logo.png',
+            //     scale: 14,
+            //   ),
+            // ),
             backgroundColor: Colors.grey[100],
             title: const Text(
               "Breno Italo",
