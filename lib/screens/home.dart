@@ -1,7 +1,6 @@
 import 'package:brenoitalo/components/circle_buttom.dart';
 import 'package:brenoitalo/utilities/colors_palette.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -30,12 +29,22 @@ class _HomeState extends State<Home> {
               style: TextStyle(
                 color: ColorsPalette.brenoText01,
                 fontWeight: FontWeight.bold,
-                fontSize: 28,
+                fontSize: 22,
                 letterSpacing: -1.5,
               ),
             ),
             actions: [
               //?App bar buttom
+              TextButton(
+                onPressed: () {},
+                child: const Text(
+                  'DESENVOLVIMENTO',
+                  style: TextStyle(
+                    color: ColorsPalette.brenoText01,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
               CircleButtom(
                 buttomLength: 115,
                 buttomText: "ORÇAMENTO",
@@ -53,30 +62,44 @@ class _HomeState extends State<Home> {
                   alignment: WrapAlignment.center,
                   children: [
                     SizedBox(
-                      height: 255,
+                      // color: Colors.grey, //*Alterar a cor do fundo
+                      height: 355,
+                      width: 550,
+                      child: Image.asset('assets/images/design01.png'),
+                    ),
+                    SizedBox(
+                      //!Centralizar o conteúdo verticalmente
+                      height: 355,
                       width: 350,
-                      // color: Colors.blueGrey,
+                      // color: Colors.blueGrey, //*Alterar a cor do fundo
                       child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const SizedBox(
-                            width: 350,
-                            child: Text(
-                              'Desenvolvedor Web e Mobile',
-                              style: TextStyle(
-                                color: ColorsPalette.brenoText01,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 40,
+                            child: Center(
+                              child: Text(
+                                'DESIGN\nGRÁFICO',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  color: ColorsPalette.brenoText01,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 40,
+                                  fontFamily: 'Righteous-Regular',
+                                ),
                               ),
                             ),
                           ),
                           const SizedBox(
                             width: 350,
-                            child: Text(
-                              'Tenha um site para chamar de seu! Sites e aplicativos responsivos automatizados e baseados no seu negócio.',
-                              style: TextStyle(
-                                color: Colors.black54,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20,
+                            child: Center(
+                              child: Text(
+                                'Criação de projetos gráficos. Folders, cartão de visita, logos, folhetos, flyers, catálogos, revistas, mídias sociais.',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  color: Colors.black54,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                ),
                               ),
                             ),
                           ),
@@ -87,12 +110,6 @@ class _HomeState extends State<Home> {
                           ),
                         ],
                       ),
-                    ),
-                    SizedBox(
-                      // color: Colors.grey,
-                      height: 255,
-                      width: 350,
-                      child: SvgPicture.asset('assets/svg/programming.svg'),
                     ),
                   ],
                 ),
