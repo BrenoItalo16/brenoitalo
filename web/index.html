@@ -100,5 +100,31 @@
       loadMainDartJs();
     }
   </script>
+
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "firebase/app";
+  import { getAnalytics } from "firebase/analytics";
+  import { } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js" //!Inserido por mim
+  import { } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"
+  import { } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"
+  import { } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-storage.js"
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyA8wrg9poJT_hfv4tMNQs0c8LjPAk4rNVI",
+    authDomain: "brenoitalo-website.firebaseapp.com",
+    projectId: "brenoitalo-website",
+    storageBucket: "brenoitalo-website.appspot.com",
+    messagingSenderId: "1078371681326",
+    appId: "1:1078371681326:web:11a14a5b0b914e4057cbbf",
+    measurementId: "G-K72NSRGC1L"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
 </body>
 </html>

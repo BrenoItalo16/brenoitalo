@@ -20,7 +20,7 @@ class _HomeState extends State<Home> {
             leading: Expanded(
               child: Image.asset(
                 'assets/images/logo.png',
-                scale: 15,
+                scale: 14,
               ),
             ),
             backgroundColor: Colors.grey[100],
