@@ -6,4 +6,5 @@ class ColorsPalette {
   static const Color brenoText01 = Color(0xFF343434);
   static const Color brenoBackBg = Color(0xFF171a21);
   static const Color brenoBackCard = Color(0xFF21232f);
+  static const Color brenoBackBlue = Color(0xFF270c54);
 }

@@ -13,22 +13,26 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: ColorsPalette.brenoBackBlue,
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
+            foregroundColor: Colors.transparent,
+            shadowColor: Colors.transparent,
             floating: true,
-            // leading: Expanded(
-            //   child: Image.asset(
-            //     'assets/images/logo.png',
-            //     scale: 14,
-            //   ),
-            // ),
-            backgroundColor: Colors.grey[100],
+            leading: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Image.asset(
+                "assets/images/logo.png",
+                // color: ColorsPalette.brenoPink,
+              ),
+            ),
+            backgroundColor: Colors.transparent,
             title: const Text(
               "Breno Italo",
               style: TextStyle(
-                color: ColorsPalette.brenoText01,
-                fontWeight: FontWeight.bold,
+                color: Colors.white70,
+                // fontWeight: FontWeight.bold,
                 fontSize: 22,
                 letterSpacing: -1.5,
               ),
@@ -40,7 +44,7 @@ class _HomeState extends State<Home> {
                 child: const Text(
                   'DESENVOLVIMENTO',
                   style: TextStyle(
-                    color: ColorsPalette.brenoText01,
+                    color: Colors.white60,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -81,7 +85,7 @@ class _HomeState extends State<Home> {
                                 'DESIGN\nGRÁFICO',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                  color: ColorsPalette.brenoText01,
+                                  color: Colors.white,
                                   fontWeight: FontWeight.bold,
                                   fontSize: 40,
                                   fontFamily: 'Righteous-Regular',
@@ -96,7 +100,7 @@ class _HomeState extends State<Home> {
                                 'Criação de projetos gráficos. Folders, cartão de visita, logos, folhetos, flyers, catálogos, revistas, mídias sociais.',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                  color: Colors.black54,
+                                  color: Colors.white70,
                                   fontWeight: FontWeight.bold,
                                   fontSize: 20,
                                 ),
