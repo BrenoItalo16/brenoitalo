@@ -1,7 +1,9 @@
 import 'package:brenoitalo/components/circle_buttom.dart';
+import 'package:brenoitalo/components/circle_icon_buttom.dart';
 import 'package:brenoitalo/utilities/colors_palette.dart';
+import 'package:brenoitalo/utilities/urls.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:line_icons/line_icons.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -40,18 +42,18 @@ class _HomeState extends State<Home> {
             ),
             actions: [
               //?App bar buttom
-              TextButton(
-                onPressed: () {
-                  whatsapp(); //*Acessa o whatsapp
-                },
-                child: const Text(
-                  'DESENVOLVIMENTO',
-                  style: TextStyle(
-                    color: Colors.white60,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
+              // TextButton(
+              //   onPressed: () {
+              //     whatsapp(); //*Acessa o whatsapp
+              //   },
+              //   child: const Text(
+              //     'DESENVOLVIMENTO',
+              //     style: TextStyle(
+              //       color: Colors.white60,
+              //       fontWeight: FontWeight.bold,
+              //     ),
+              //   ),
+              // ),
               CircleButtom(
                 buttomLength: 115,
                 buttomText: "ORÇAMENTO",
@@ -125,20 +127,74 @@ class _HomeState extends State<Home> {
               ),
             ),
           ),
+          //todo: Criação de rodapé
+          SliverToBoxAdapter(
+            child: Container(
+              color: Colors.black45,
+              child: Column(
+                children: [
+                  const SizedBox(height: 20),
+                  Container(
+                    height: 50,
+                    width: MediaQuery.of(context).size.width,
+                    decoration: const BoxDecoration(
+                      gradient: ColorsPalette.brenoDegrade,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'assets/images/logo.png',
+                          scale: 25,
+                        ),
+                        const Text(
+                          " Breno Italo",
+                          style: TextStyle(color: Colors.white54),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    height: 100,
+                    color: Colors.black45,
+                    width: MediaQuery.of(context).size.width,
+                    child: Column(
+                      children: [
+                        const SizedBox(width: 10),
+                        const Text(
+                          '© 2022 Breno Italo, Av Luiz Gonzaga, 983, Centro, Ipanguaçu, RN',
+                          style: TextStyle(color: Colors.white54, fontSize: 10),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: const [
+                            CircleIconButtom(
+                              buttonLength: 30,
+                              iconButton: LineIcons.whatSApp,
+                              onPressed: whatsapp,
+                            ),
+                            CircleIconButtom(
+                              buttonLength: 30,
+                              iconButton: LineIcons.instagram,
+                              onPressed: instagram,
+                            ),
+                            CircleIconButtom(
+                              buttonLength: 30,
+                              iconButton: LineIcons.twitter,
+                              onPressed: twitter,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          )
+          //todo: final do rodapé
         ],
       ),
     );
-  }
-}
-
-// ignore: always_declare_return_types, type_annotate_public_apis
-whatsapp() async {
-  const whatsappUrl =
-      "https://api.whatsapp.com/send?phone=5584998559833&text=Olá, Breno! Estou precisando de um dos seus serviços.";
-
-  if (await canLaunch(whatsappUrl)) {
-    await launch(whatsappUrl);
-  } else {
-    throw 'Could not launch $whatsappUrl';
   }
 }

@@ -7,4 +7,12 @@ class ColorsPalette {
   static const Color brenoBackBg = Color(0xFF171a21);
   static const Color brenoBackCard = Color(0xFF21232f);
   static const Color brenoBackBlue = Color(0xFF270c54);
+  static const LinearGradient brenoDegrade = LinearGradient(
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
+    colors: [
+      Colors.transparent,
+      Colors.black38,
+    ],
+  ); //
 }
