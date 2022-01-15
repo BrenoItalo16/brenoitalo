@@ -1,6 +1,7 @@
 import 'package:brenoitalo/components/circle_buttom.dart';
 import 'package:brenoitalo/utilities/colors_palette.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -40,7 +41,9 @@ class _HomeState extends State<Home> {
             actions: [
               //?App bar buttom
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  whatsapp(); //*Acessa o whatsapp
+                },
                 child: const Text(
                   'DESENVOLVIMENTO',
                   style: TextStyle(
@@ -52,8 +55,8 @@ class _HomeState extends State<Home> {
               CircleButtom(
                 buttomLength: 115,
                 buttomText: "ORÇAMENTO",
-                onPressed: () {
-                  debugPrint('Botão de orçamento funcionando');
+                onPressed: () async {
+                  whatsapp(); //*Acessa o whatsapp
                 },
               ),
             ],
@@ -109,7 +112,9 @@ class _HomeState extends State<Home> {
                           ),
                           CircleButtom(
                             buttomLength: 100,
-                            onPressed: () {},
+                            onPressed: () {
+                              whatsapp(); //*Acessa o whatsapp
+                            },
                             buttomText: "EU QUERO",
                           ),
                         ],
@@ -123,5 +128,17 @@ class _HomeState extends State<Home> {
         ],
       ),
     );
+  }
+}
+
+// ignore: always_declare_return_types, type_annotate_public_apis
+whatsapp() async {
+  const whatsappUrl =
+      "https://api.whatsapp.com/send?phone=5584998559833&text=Olá, Breno! Estou precisando de um dos seus serviços.";
+
+  if (await canLaunch(whatsappUrl)) {
+    await launch(whatsappUrl);
+  } else {
+    throw 'Could not launch $whatsappUrl';
   }
 }
