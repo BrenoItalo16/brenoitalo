@@ -1,5 +1,4 @@
-// ignore_for_file: avoid_web_libraries_in_flutter
-
+// ignore: avoid_web_libraries_in_flutter
 import 'dart:html';
 
 import 'package:brenoitalo/components/circle_buttom.dart';
@@ -165,30 +164,36 @@ class _HomeState extends State<Home> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const SizedBox(
+                          SizedBox(
                             child: Center(
-                              child: Text(
-                                'DESIGN\nGRÁFICO',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 40,
-                                  fontFamily: 'Righteous-Regular',
+                              child: TextRenderer(
+                                element: ParagraphElement(),
+                                text: const Text(
+                                  'DESIGN\nGRÁFICO',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 40,
+                                    fontFamily: 'Righteous-Regular',
+                                  ),
                                 ),
                               ),
                             ),
                           ),
-                          const SizedBox(
+                          SizedBox(
                             width: 350,
                             child: Center(
-                              child: Text(
-                                'Criação de projetos gráficos. Folders, cartão de visita, logos, folhetos, flyers, catálogos, revistas, além de gerenciamento de mídias sociais.',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  color: Colors.white70,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 20,
+                              child: TextRenderer(
+                                element: ParagraphElement(),
+                                text: const Text(
+                                  'Criação de projetos gráficos. Folders, cartão de visita, logos, folhetos, flyers, catálogos, revistas, além de gerenciamento de mídias sociais.',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Colors.white70,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20,
+                                  ),
                                 ),
                               ),
                             ),
@@ -231,24 +236,29 @@ class _HomeState extends State<Home> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const SizedBox(
+                          SizedBox(
                             child: Center(
-                              child: Text(
-                                'DESENVOLDOR\nWEB E MOBILE',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 40,
-                                  fontFamily: 'Righteous-Regular',
+                              child: TextRenderer(
+                                element: ParagraphElement(),
+                                text: const Text(
+                                  'DESENVOLDOR\nWEB E MOBILE',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 40,
+                                    fontFamily: 'Righteous-Regular',
+                                  ),
                                 ),
                               ),
                             ),
                           ),
-                          const SizedBox(
+                          SizedBox(
                             width: 350,
                             child: Center(
-                              child: Text(
+                                child: TextRenderer(
+                              element: ParagraphElement(),
+                              text: const Text(
                                 'Sites portifólio, sites personalizados de acordo com a necessidade do seu negócio, catálogos virtuais com domínio personalizado e aplicativos em geral.',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
@@ -257,7 +267,7 @@ class _HomeState extends State<Home> {
                                   fontSize: 20,
                                 ),
                               ),
-                            ),
+                            )),
                           ),
                           CircleButtom(
                             buttomLength: 150,
