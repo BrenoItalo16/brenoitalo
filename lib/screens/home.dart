@@ -20,8 +20,7 @@ class _HomeState extends State<Home> {
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
-            foregroundColor: Colors.transparent,
-            shadowColor: Colors.transparent,
+            foregroundColor: ColorsPalette.brenoBackBlue,
             floating: true,
             leading: Padding(
               padding: const EdgeInsets.all(10.0),
@@ -30,7 +29,7 @@ class _HomeState extends State<Home> {
                 // color: ColorsPalette.brenoPink,
               ),
             ),
-            backgroundColor: Colors.transparent,
+            backgroundColor: ColorsPalette.brenoBackBlue,
             title: const Text(
               "Breno Italo",
               style: TextStyle(
@@ -102,7 +101,7 @@ class _HomeState extends State<Home> {
                             width: 350,
                             child: Center(
                               child: Text(
-                                'Criação de projetos gráficos. Folders, cartão de visita, logos, folhetos, flyers, catálogos, revistas, mídias sociais.',
+                                'Criação de projetos gráficos. Folders, cartão de visita, logos, folhetos, flyers, catálogos, revistas, além de gerenciamento de mídias sociais.',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   color: Colors.white70,
@@ -121,6 +120,87 @@ class _HomeState extends State<Home> {
                           ),
                         ],
                       ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 64),
+                      child: Divider(
+                        thickness: 5,
+                        color: Colors.white10,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.all(32.0),
+              child: Center(
+                child: Wrap(
+                  alignment: WrapAlignment.center,
+                  children: [
+                    SizedBox(
+                      //!Centralizar o conteúdo verticalmente
+                      height: 355,
+                      width: 350,
+                      // color: Colors.blueGrey, //*Alterar a cor do fundo
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const SizedBox(
+                            child: Center(
+                              child: Text(
+                                'DESENVOLDOR\nWEB E MOBILE',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 40,
+                                  fontFamily: 'Righteous-Regular',
+                                ),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 350,
+                            child: Center(
+                              child: Text(
+                                'Sites portifólio, sites personalizados de acordo com a necessidade do seu negócio, catálogos virtuais com domínio personalizado e aplicativos em geral.',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  color: Colors.white70,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                ),
+                              ),
+                            ),
+                          ),
+                          CircleButtom(
+                            buttomLength: 100,
+                            onPressed: () {
+                              whatsapp(); //*Acessa o whatsapp
+                            },
+                            buttomText: "EU QUERO",
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      // color: Colors.grey, //*Alterar a cor do fundo
+                      height: 355,
+                      width: 550,
+                      child: Image.asset(
+                        'assets/images/dev.png',
+                      ), //!Programming image
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 64),
+                      //!Descomentar o código a baixo quando for inserir mais conteúdo a baixo.
+                      // child: Divider(
+                      //   thickness: 5,
+                      //   color: Colors.white10,
+                      // ),
                     ),
                   ],
                 ),

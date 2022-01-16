@@ -74,6 +74,7 @@ flutter:
     - assets/images/logo.png  #Logo 512x512
     - assets/images/design01.png  #first programming content
     - assets/images/design02.png  #first programming content
+    - assets/images/dev.png  #first programming content
     - assets/svg/  #first programming content
     - assets/svg/programming.svg  #first programming content
     - assets/svg/design01.svg  #first programming content
