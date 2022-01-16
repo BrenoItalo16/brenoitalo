@@ -3,10 +3,14 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(
-    const MaterialApp(
+    MaterialApp(
       title: "Breno Italo",
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      initialRoute: '/home',
+      routes: {
+        '/home': (context) => const Home(),
+      },
+      // home: Home(),
     ),
   );
 }
