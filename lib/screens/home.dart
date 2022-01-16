@@ -1,10 +1,20 @@
+// ignore_for_file: avoid_web_libraries_in_flutter
+
+import 'dart:html';
+
 import 'package:brenoitalo/components/circle_buttom.dart';
 import 'package:brenoitalo/components/circle_icon_buttom.dart';
 import 'package:brenoitalo/utilities/colors_palette.dart';
 import 'package:brenoitalo/utilities/urls.dart';
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
+import 'package:seo_renderer/renderers/text_renderer/text_renderer.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+// TextRenderer(
+//   element: ParagraphElement(),
+//   text: const Text(data),
+// )
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -96,13 +106,17 @@ class _HomeState extends State<Home> {
               ),
             ),
             backgroundColor: ColorsPalette.brenoBackBlue,
-            title: const Text(
-              "Breno Italo",
-              style: TextStyle(
-                color: Colors.white70,
-                // fontWeight: FontWeight.bold,
-                fontSize: 22,
-                letterSpacing: -1.5,
+            title: TextRenderer(
+              //! seo element
+              element: ParagraphElement(),
+              text: const Text(
+                "Breno Italo",
+                style: TextStyle(
+                  color: Colors.white70,
+                  // fontWeight: FontWeight.bold,
+                  fontSize: 22,
+                  letterSpacing: -1.5,
+                ),
               ),
             ),
             actions: [
